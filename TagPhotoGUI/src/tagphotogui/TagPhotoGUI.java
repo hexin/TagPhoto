@@ -38,8 +38,10 @@ public class TagPhotoGUI {
     private void setMainFrame() {
         mainFrame = new JFrame("TagPhoto");
         Toolkit theKit = mainFrame.getToolkit();
-        mainFrame.setLayout(new MainLayout());
-        Dimension size = mainFrame.getLayout().minimumLayoutSize(mainFrame);
+        MainLayout mainLayout = new MainLayout();
+        mainFrame.setLayout(mainLayout);
+        mainFrame.setMinimumSize(mainLayout.minimumLayoutSize(mainFrame));
+        Dimension size = mainLayout.minimumLayoutSize(mainFrame);
         Dimension wndSize = theKit.getScreenSize();
         mainFrame.setBounds(wndSize.width / 4, wndSize.height / 4,
                 size.width, size.height);

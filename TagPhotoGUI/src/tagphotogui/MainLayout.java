@@ -23,9 +23,9 @@ public class MainLayout implements LayoutManager {
 
     public MainLayout() {
         margin = TagPhotoGUI.MARGIN;
-        minimalHeight = 4 * margin+
+        minimalWidth = 4 * margin+
                 TagPhotoGUI.TOOLBAR_WIDTH + TagPhotoGUI.DRAWBOARD_WIDTH;
-        minimalWidth = 4 * margin + TagPhotoGUI.UPPERBAR_HEIGHT +
+        minimalHeight = 4 * margin + TagPhotoGUI.UPPERBAR_HEIGHT +
                 TagPhotoGUI.DRAWBOARD_HEIGHT +TagPhotoGUI.LOWERBAR_HEIGHT;
         minimalDimension = new Dimension(minimalWidth, minimalHeight);
     }
