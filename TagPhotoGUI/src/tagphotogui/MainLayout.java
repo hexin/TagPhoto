@@ -18,7 +18,7 @@ public class MainLayout implements LayoutManager {
     private Component lowerbar;
     private Component upperbar;
     private Component drawboard;
-    private int toolbarWidth, toolbarHeight, width, height;
+    private int toolbarWidth, width, height;
     private Dimension frameDimension;
 
     public MainLayout() {

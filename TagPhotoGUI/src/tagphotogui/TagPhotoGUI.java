@@ -37,6 +37,9 @@ public class TagPhotoGUI {
 
     private void setMainFrame() {
         mainFrame = new JFrame("TagPhoto");
+
+        // No bar and borders.
+        mainFrame.setUndecorated(true);
         Toolkit theKit = mainFrame.getToolkit();
         MainLayout mainLayout = new MainLayout();
         mainFrame.setLayout(mainLayout);
@@ -46,6 +49,7 @@ public class TagPhotoGUI {
         mainFrame.setBounds(wndSize.width / 4, wndSize.height / 4,
                 size.width, size.height);
         mainFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
         // The order of adding this components is very important.
         // If you chnage it, you should change MainLayout.
         toolbar = new Toolbar();
@@ -56,6 +60,7 @@ public class TagPhotoGUI {
         mainFrame.add(drawboard);
         lowerbar = new Lowerbar();
         mainFrame.add(lowerbar);
+
         // Do this when the window is ready.
         mainFrame.setVisible(true);
     }
