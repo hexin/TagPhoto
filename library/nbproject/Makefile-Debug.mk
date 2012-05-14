@@ -33,7 +33,8 @@ include Makefile
 OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
-OBJECTFILES=
+OBJECTFILES= \
+	${OBJECTDIR}/jpg.o
 
 
 # C Compiler Flags
@@ -61,6 +62,11 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/liblibrary.a: ${OBJECTFILES}
 	${RM} ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/liblibrary.a
 	${AR} -rv ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/liblibrary.a ${OBJECTFILES} 
 	$(RANLIB) ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/liblibrary.a
+
+${OBJECTDIR}/jpg.o: jpg.c 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} $@.d
+	$(COMPILE.c) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/jpg.o jpg.c
 
 # Subprojects
 .build-subprojects:
